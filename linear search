@@ -1,0 +1,56 @@
+#linear search
+'''n=int(input("Enter number of elements :"))
+arr=[]
+for i in range(n):
+    val= int(input("Enter value : "))
+    arr.append(val)
+target= int(input("Enter element to Search: "))
+for i in range(n):
+    if target==arr[i]:
+        print(target,"found at index",i)
+        break
+    else:
+        print("Traget not found")'''
+
+#binary search (only for sorted elements)
+'''n=int(input("Enter number of elements :"))
+arr=[]
+for i in range(n):
+    val= int(input("Enter value : "))
+    arr.append(val)
+target= int(input("Enter element to Search: "))
+left= 0
+right= n-1
+while left <= right:
+    mid = (left+right)//2
+    if arr[mid]==target:
+        print(target,"found at index:",mid)
+        break
+    elif arr[mid] < target:
+        left = mid+1
+    else:
+        right= mid-1
+else:
+    print("Element not found !!!")'''
+
+#jump search (only for sorted elements)
+'''import math
+n=int(input("Enter number of elements :"))
+arr=[]
+for i in range(n):
+    val= int(input("Enter value : "))
+    arr.append(val)
+    
+target= int(input("Enter element to Search: "))
+n= len(arr)
+step= int(math.sqrt(n))
+i=0
+while i<n and arr[i]< target:
+    i+=step
+start= max(0, i-step)
+for j in range(start, min(i+1,n)):
+    if arr[j]==target:
+        print(target,"found at index", j)
+        break
+else:
+    print("Element not found ....")'''
