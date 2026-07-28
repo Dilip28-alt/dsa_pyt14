@@ -1,0 +1,87 @@
+'''Binary search variations: (used for space reduction), more accuracy
+1. binary search
+2. lower bound
+3. first occurance
+4. last occurance
+6. Search in rotated array
+7. find peak element
+8. square root of a number'''
+#upper bound:
+'''ex a=1 2 2 2 3 4
+    upper bound of 2 = 3,4(values after that number)'''
+    
+'''n=int(input("Enter size:"))
+arr=[]
+for i in range(n):
+    val= int(input("Enter the value:"))
+    arr.append(val)
+target= int(input("Enter the slicing value: "))
+left= 0
+right= n
+while left<right:
+    mid=(left+right)//2
+    if arr[mid]<= target:
+        left=mid+1
+    else:
+        right= mid
+print("Upper bound index",left)
+if left<n:
+    print("Remaining numbers:")
+    for i in range(left, n):
+        print(arr[i], end=" ")
+else:
+    print("Empty")'''
+    
+#lower bound
+    #upper bound
+'''n=int(input("Enter size:"))
+arr=[]
+for i in range(n):
+    val= int(input("Enter the value:"))
+    arr.append(val)
+target= int(input("Enter the slicing value: "))
+left= 0
+right= n
+while left<right:
+    mid=(left+right)//2
+    if arr[mid]< target:
+        left=mid+1
+    else:
+        right=mid
+print("Lower bound index",left)
+print("Remaining numbers:")
+for i in range(left):
+    print(arr[i], end=" ")'''
+    
+#to find the index of last occurance value
+'''n=int(input("Enter size:"))
+arr=[]
+for i in range(n):
+    val= int(input("Enter the value:"))
+    arr.append(val)
+target= int(input("Enter the slicing value: "))
+left= 0
+right= n
+while left<right:
+    mid=(left+right)//2
+    if arr[mid]<= target: #for first occurance use condition if (arr[mid]< target):
+        result= mid+1
+        left=mid+1
+    else:
+        right=mid-1
+print("Last occurance value",result)'''
+
+#square root of a number using binary operations
+'''n=int(input("Enter a number:"))
+left=0
+right=n
+
+while left<=right:
+    mid=(left+right)//2
+    if mid*mid<=n:
+        result= mid
+        left=mid+1
+    else:
+        right=mid-1
+print(f"square root of {n} is: {result}")'''
+
